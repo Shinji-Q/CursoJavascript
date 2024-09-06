@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulário de Contato</title>
+    </head>
+    <body>
+        <div class="form-wrapper">
+            <h1>Formulário Para Contato</h1>
+            <form>
+
+            <label for="name">Nome Completo: </label>
+            <input type="text" name="name" id="name" placeholder="Digite seu nome completo">
+            <br/>
+
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" placeholder="Digite seu email para contato">
+            <br/>
+            
+            <label for="gender">Gênero:</label><br/>
+            <div class="radio-wrapper" id="gender">
+                <input type="radio" name="gender" value="M" id="Masculino">
+                <label for="masculino">Masculino</label>
+                <input type="radio" name="gender" value="F" id="Masculino">
+                <label for="feminino">Feminino</label>
+            </div>
+
+            <label for="interest">Área de interesse</label>
+
+            <select id="interest" name="dayOfWeek">
+                <option value="development">Desenvolvimento</option>
+                <option value="adm">Administração</option>
+                <option value="hr">Recursos Humanos</option>
+            </select>
+
+            <br/>
+
+            <label for="contact-preference">Preferência de Contato:</label>
+            <div class="checkbox-wrapper" id="contact-preference">
+                <input type="checkbox" name="contact-preference" value="email" id="email">
+                <label for="email">Email</label>
+                <input type="checkbox" name="contact-preference" value="phone" id="phone">
+                <label for="phone">Telefone</label>
+                <input type="checkbox" name="contact-preference" value="sms" id="sms">
+                <label for="sms">SMS</label>
+            </div>
+
+            <label for="message">Mensagem: </label>
+            <textarea name="message" placeholder="Escreva sua mensagem aqui" rows=7></textarea>
+            <br/>
+            <button>Enviar</button>
+
+            </form>
+        </div>
+    </body>
+</html>

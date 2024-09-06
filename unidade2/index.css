@@ -1,0 +1,57 @@
+/* CSS para centralizar conteúdo */
+.centralize-content {
+    display: flex;
+    flex-direction: column; /* Alinha os itens em uma coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    min-height: 100vh; /* Garante que a div ocupe 100% da altura da tela */
+    text-align: center; /* Centraliza o texto */
+    background-color: #f0f0f0; /* Cor de fundo (opcional) */
+}
+
+/* Estilo adicional para a largura total */
+.full-width {
+    width: 100%; /* Garante que a div ocupe toda a largura */
+}
+
+h1, h2, h3, h4, h5, h6, p, spam, li {
+    margin: 10px 0; /* Espaçamento entre os elementos */
+    font-family: Arial, sans-serif; /* Fonte básica */
+}
+
+/* Container for the two columns */
+.column-container-8-4 {
+    display: flex;
+    gap: 40px; /* Gap between the columns */
+}
+
+/* Left column (8/12 of the width) */
+.column-container-8-4 > div:first-child {
+    flex: 8; /* 8/12 of the space */
+    border: 2px solid #333; /* Outline for the column */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Padding inside the column */
+    margin: 20px 0;
+}
+
+/* Right column (4/12 of the width) */
+.column-container-8-4 > div:last-child {
+    flex: 4; /* 4/12 of the space */
+    border: 2px solid #333; /* Outline for the column */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Padding inside the column */
+    margin: 20px 0;
+}
+
+/* Ensures the columns are responsive and don't overflow */
+.column-container-8-4 > div {
+    box-sizing: border-box;
+}
+
+/* Class to limit the width to 1280px */
+.limited-width {
+    max-width: 1280px; /* Maximum width of 1280px */
+    margin: 0 auto; /* Centers the container on the page */
+    width: 100%; /* Ensures the container is responsive */
+    box-sizing: border-box; /* Include padding and borders in the element's width */
+}

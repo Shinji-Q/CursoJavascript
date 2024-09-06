@@ -1,0 +1,102 @@
+/* Import the desired font for labels */
+@import url('https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap');
+
+/* Wrapper for the form with limited width */
+.form-wrapper {
+    max-width: 1280px; /* Maximum width of 1280px */
+    margin: 0 auto; /* Centering the form */
+    padding: 20px;
+}
+
+/* General styling for form elements */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds space between form elements */
+}
+
+/* Full-width input fields with rounded corners and bold text */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%; /* Full width of the parent */
+    padding: 10px; /* Padding inside the element */
+    border: none; /* Removes borders */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #f0f0f0; /* Solid background color */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    font-size: 16px; /* Larger text size */
+    font-weight: bold; /* Bold text */
+    outline: none; /* Remove the outline when focused */
+}
+
+/* Allow vertical resizing only for textarea */
+textarea {
+    resize: vertical;
+}
+
+/* Styling for submit button */
+button {
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* Removes borders */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #007BFF; /* Button background color */
+    color: white; /* Text color */
+    font-size: 18px; /* Larger text size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+}
+
+button:focus {
+    outline: none; /* Remove default focus outline */
+}
+
+/* Styling for radio buttons and labels */
+.radio-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Space between items */
+    max-width: 1280px; /* Maximum width of the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+}
+
+/* Header styling */
+.radio-wrapper h3 {
+    font-family: Arial, sans-serif; /* Font styling */
+    font-size: 20px; /* Font size */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 10px; /* Space below the header */
+}
+
+/* Radio buttons container styling */
+.radio-wrapper > div {
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    gap: 15px; /* Space between radio button and label */
+}
+
+/* Radio buttons styling */
+.radio-wrapper input[type="radio"] {
+    width: 20px; /* Proportional width */
+    height: 20px; /* Proportional height */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-right: 5px; /* Space between radio button and label */
+}
+
+label {
+    font-family: 'Arial', sans-serif; /* Font styling */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    display: inline-flex; /* Aligns label text with the radio button */
+    align-items: center; /* Aligns label text vertically with the radio button */
+}
+
