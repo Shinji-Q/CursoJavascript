@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>variaveis</title>
+    </head>
+    <body>
+        <script>
+
+            let nome = prompt('Digite seu nome');
+
+            document.write(`Olá ${nome}!!!<br/>`);
+
+            let anoStr = prompt('Digite o ano de seu nascimento');
+
+            let ano = parseInt(anoStr);
+
+            while(isNaN(ano)) {
+                anoStr = prompt('Digite um Número válido');
+                ano = parseInt(anoStr);
+            }
+
+            document.write(`eu sei que você tem ${2024 - ano} anos`);
+            
+        </script>
+    </body>
+</html>
