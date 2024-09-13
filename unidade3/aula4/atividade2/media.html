@@ -1,0 +1,29 @@
+<html>
+    <head lang="pt-br">
+        <meta charset="UTF-8">
+        <title>Média!</title>
+        <style>
+        * {
+            font: bold 23px Helvetica;
+        }
+        </style>
+    </head>
+    <body>
+
+        <script>
+            let notas = [];
+            for(let i = 1; i <= 4; ++i) {
+                let nota =  NaN;
+
+                while(isNaN(nota)){
+                    let notaStr = prompt(`informe a ${i}ª nota`);
+                    nota = parseInt(notaStr)
+                }
+
+                notas.push(nota);
+            }
+
+            document.write(`Média das notas: ${notas.reduce((acc, val) => acc + val) / notas.length}`);
+        </script>
+    </body>
+</html>

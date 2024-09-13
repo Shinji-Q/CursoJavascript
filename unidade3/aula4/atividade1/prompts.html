@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>prompts</title>
+        <style>
+            * {
+                font: bold 17px Helvetica;
+            }
+        </style> 
+    </head>
+    <body>
+        <script>
+            let nome = prompt('Digite seu nome');
+
+            let idadeStr = prompt('Digite sua idade');
+
+            let idade = parseInt(idadeStr);
+
+            while(isNaN(idade)) {
+                idadeStr = prompt('Digite um Número válido');
+                idade = parseInt(idadeStr);
+            }
+
+            let telefone = prompt('informe seu telefone');
+            let email = prompt('inform seu email');
+
+            let obj = {nome, idade, telefone, email};
+
+            document.write(`nome: ${nome}<br/>`);
+            document.write(`idade: ${idade}<br/>`);
+            document.write(`telefone: ${telefone}<br/>`);
+            document.write(`email: ${email}<br/>`);
+            document.write(`obj: ${JSON.stringify(obj)}<br/>`);
+            
+        </script>
+    </body>
+</html>

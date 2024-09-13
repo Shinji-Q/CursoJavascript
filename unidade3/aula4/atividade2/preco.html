@@ -1,0 +1,31 @@
+<html>
+    <head lang="pt-br">
+        <meta charset="UTF-8">
+        <title>Média!</title>
+        <style>
+        * {
+            font: bold 23px Helvetica;
+        }
+        </style>
+    </head>
+    <body>
+
+        <script>
+            let preco =  NaN;
+
+            while(isNaN(preco)){
+                let precoStr = prompt(`informe o preço do produto`);
+                preco = parseFloat(precoStr)
+            }
+
+            let precoAVista = preco * 0.9;
+            let parcelamento2x = preco/2;
+            let parcelamento3x = preco/3;
+
+            document.write(`Preço à vista: R$ ${precoAVista.toFixed(2)} (10% de desconto)<br/>`);
+            document.write(`Parcela em 2x: R$ ${parcelamento2x.toFixed(2)}<br/>`);
+            document.write(`Parcela em 3x: R$ ${parcelamento3x.toFixed(2)}<br/>`);
+
+        </script>
+    </body>
+</html>
