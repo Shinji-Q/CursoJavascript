@@ -1,0 +1,29 @@
+<html>
+    <head lang="pt-br">
+        <meta charset="UTF-8">
+        <title>Jantar!</title>
+        <style>
+        * {
+            font: bold 23px Helvetica;
+        }
+        </style>
+    </head>
+    <body>
+
+        <script>
+            let preco =  NaN;
+
+            while(isNaN(preco)){
+                let precoStr = prompt(`informe o valor total do que foi consumido:`);
+                preco = parseFloat(precoStr)
+            }
+
+            let gorjeta = preco * 0.1;
+
+            document.write(`Consumido: R$ ${preco.toFixed(2)}<br/>`);
+            document.write(`Valor da gorjeta: R$ ${gorjeta.toFixed(2)}<br/>`);
+            document.write(`Total: R$ ${(gorjeta + preco).toFixed(2)}<br/>`);
+
+        </script>
+    </body>
+</html>
