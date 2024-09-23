@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>CALCULADORA</title>
+        <meta charset="UTF-8">
+        <style>
+            * {
+                font-family: sans-serif;
+            }
+
+            #root {
+                width: fit-content;
+                margin: 10vh auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root">
+            <h1 id="output">alou</h1>
+
+            <script>
+                const output = document.querySelector('div#root h1');
+
+                function writeToDocument(message){
+                    output.innerText = message;
+                }
+
+                function main() {
+
+                    let inputStr = prompt('Escreva uma expressão com argumentos separados por espaços (Ex.: 11 + 3)');
+                    let inputs = inputStr.split(' ').filter(val => val!== '');
+
+                    writeToDocument(inputs);
+
+                    if(inputs.length < 3){
+                        writeToDocument('forneça ao menos 3 inputs');
+                        return;
+                    }
+
+                    let arg1 = parseFloat(inputs[0]);
+                    let op = inputs[1];
+                    let arg2 = parseFloat(inputs[2]);
+
+                    if(isNaN(arg1) || isNaN(arg2)){
+                        writeToDocument('argumento inválido');
+                        return;
+                    }
+
+                    let resultMessage = `${arg1} ${op} ${arg2} = `;
+
+                    switch(op) {
+                        case '+':
+                            resultMessage += (arg1 + arg2);
+                            break;
+                        case '-':
+                            resultMessage += (arg1 - arg2);
+                            break;
+                        case '*':
+                            resultMessage += (arg1 * arg2);
+                            break;
+                        case '/':
+                            resultMessage += (arg1 / arg2);
+                            break;
+                        default:
+                            resultMessage = ('operação inválida');
+                    }
+
+                    writeToDocument(resultMessage);
+
+                }
+
+                main();
+            </script>
+        </div>
+    </body>
+</html>
+

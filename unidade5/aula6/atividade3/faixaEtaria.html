@@ -1,0 +1,47 @@
+<html lang="pt-br">
+    <head>
+        <title>Conceito</title>
+        <meta charset="UTF-8">
+        <style>
+            * {
+                font-family: sans-serif;
+            }
+
+            #root {
+                width: fit-content;
+                margin: 10vh auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root">
+            <h1>EITA</h1>
+
+            <script>
+                let idade = parseInt(prompt('informe a idade da pessoa'));
+                const output = document.querySelector('div#root h1');
+
+                function writeToDocument(message){
+                    output.innerText = message;
+                }
+
+                if(isNaN(idade)){
+                    writeToDocument("Input inválido");
+                } else if(idade < 0) {
+                    writeToDocument("Pessoa Hipotética");
+                } else if(idade < 14) {
+                    writeToDocument("Criança");
+                } else if(idade < 19) {
+                    writeToDocument("Adolescente");
+                } else if(idade < 65) {
+                    writeToDocument("Adulto");
+                } else if(idade <= 120) {
+                    writeToDocument("Idoso");
+                } else {
+                    writeToDocument("Ancião");
+                }
+
+            </script>
+        </div>
+    </body>
+</html>

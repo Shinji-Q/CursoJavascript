@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>CORES</title>
+        <meta charset="UTF-8">
+        <style>
+
+            * {
+                font-family: sans-serif;
+            }
+
+            #contentWrapper{
+                margin: 10vh auto;
+                width: fit-content;
+            }
+            input[type="text"] {
+                width: 100%;
+                margin: 10px;
+                border-radius: 5px;
+                border: 1px solid darkgray;
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="contentWrapper">
+            <h1 id="boasVindas">Hola, Bien Venido! :)</h1>
+
+            <form name="dados">
+
+                <input type="text" name="background" placeholder="Cor De Fundo">
+                <input type="text" name="foreground" placeholder="Cor do Texto">
+                <input type="text" name="message" placeholder="Mensagem">
+
+            </form>
+
+        </div>
+
+        <script>
+
+            let docBody = document.body;
+            let title = document.getElementById('boasVindas');
+
+
+            let backgroundInput = document.querySelector('input[name="background"]');
+            let foregroundInput = document.querySelector('input[name="foreground"]');
+            let messageInput = document.querySelector('input[name="message"]');
+
+            backgroundInput.addEventListener('change', (ev) => {
+                docBody.style.backgroundColor = ev.target.value;
+            });
+
+            foregroundInput.addEventListener('change', (ev) => {
+                title.style.color = ev.target.value;
+            });
+
+            messageInput.addEventListener('change', (ev) => {
+                title.innerText = ev.target.value;
+            });
+
+        </script>
+    </body>
+</html>

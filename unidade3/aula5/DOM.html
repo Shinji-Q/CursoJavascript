@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>DOM</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1 id="title">Titulo</h1>
+        <p class="paragraph">paragrafo</p>
+        <p class="paragraph">paragrafo</p>
+        <input type="text" name="nome" placeholder="DigiteSeuNome">
+        <input type="checkbox" name="check" id="check">
+
+        <script>
+            console.log("start");
+
+            let titulo = document.getElementById('title');
+            let paragrafos = document.getElementsByClassName('paragraph');
+            let paragrafosTags = document.getElementsByTagName('p');
+            let nameInputs = document.getElementsByName('nome');
+
+            let querySelectorTitulo = document.querySelector('#title');
+            let querySelectorParagrafos = document.querySelector('.paragraph');
+            let querySelectorInput = document.querySelectorAll('[name="nome"]')
+
+
+
+            //manipulando conteúdo e estilo
+
+            console.log(titulo.innerHTML); // || innerTExt
+            console.log(nameInputs[0].placeholder);
+
+            titulo.innerHTML = 'Novo Titulo';
+            console.log(titulo.style);
+            title.style.color = 'Teal';
+
+            for(let i = 0; i < paragrafos.length; ++i){
+                paragrafos[i].style.color = 'red';
+            }
+
+            let checkbox = document.getElementById('check');
+            
+            // manipulando outros valores
+            nameInputs[0].placeholder = 'novo placeholder'
+            nameInputs[0].value = 'novo valor'
+            checkbox.checked= true;
+
+        </script>
+    </body>
+</html>
+

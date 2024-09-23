@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>EVENTOS</title>
+        <meta charset="UTF-8">
+        <style>
+            * {
+                font-family: sans-serif;
+            }
+
+            #root {
+                margin: 10ch auto;
+                display: flex;
+                flex-direction: column;
+                gap:20px;
+            }
+
+            .container {
+                margin: auto;
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                width: fit-content;
+            }
+
+            button {
+                margin: auto;
+                width: 40px;
+                height: 40px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- com referências dentro do html -->
+        <div id="root">
+
+            <div class="container">
+                <h2>html:</h2>
+            </div>
+
+            <div class="container">
+                <button name="minus" onclick="decrement()">-</button>
+                <h1 id="valor">0</h1>
+                <button name="plus" onclick="increment()">+</button>
+            </div>
+
+            <script>
+                let value = 0;
+                let target = document.getElementById('valor');
+
+                function decrement() {
+                    target.innerText = --value;
+                }
+
+                function increment() {
+                    target.innerText = ++value;
+                }
+
+            </script>
+
+            <div class="container">
+                <h2>addEventListener:</h2>
+            </div>
+
+            <!-- com addEventListener -->
+
+            <div class="container">
+                <button name="minusEventListener" >-</button>
+                <h1 id="valor2">0</h1>
+                <button name="plusEventListener" >+</button>
+            </div>
+
+            <script>
+                const LISTENED_EVENT = 'click';
+                let value2 = 0;
+                let target2 = document.getElementById('valor2');
+
+                let minusButtom = document.querySelector('[name="minusEventListener"]');
+                let plusButtom = document.querySelector('[name="plusEventListener"]');
+
+                minusButtom.addEventListener(LISTENED_EVENT, () => target2.innerText = --value2);
+                plusButtom.addEventListener(LISTENED_EVENT, function() {target2.innerText = ++value2;});
+
+            </script>
+
+        </div>
+    </body>
+</html>
+
