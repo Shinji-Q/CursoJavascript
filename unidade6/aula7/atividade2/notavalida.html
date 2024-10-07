@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head lang="pt-br">
+        <title>Respeite a regra</title>
+        <meta charset="UTF-8">
+        <style>
+            * {
+                font-family: sans-serif;
+            }
+
+            div#root {
+                width: 100%;
+                align-content: center;
+            }
+
+            div#content{
+                margin: 10vh auto;
+                width: fit-content;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="root">
+            <div id="content">
+                <h1 id="output">ola</h1>
+            </div>
+        </div>
+
+        <script>
+
+            function isValidGrade(grade) {
+                return !(isNaN(grade) || grade < 0 || 10 < grade);
+            }
+
+            let n = NaN;
+
+            do{
+
+                n = parseFloat(prompt('Informe uma nota(deve estar entre 0 e 10)'));
+
+            } while(!isValidGrade(n))
+
+            let out = document.querySelector('#output');
+            out.innerText = n;
+
+        </script>
+    </body>
+</html>
