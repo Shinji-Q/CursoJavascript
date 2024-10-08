@@ -1,0 +1,45 @@
+<html>
+    <head lang="pt-BR">
+        <title>defina</title>
+        <meta charset="UTF-8">
+        <style>
+            * {
+                font-family: sans-serif;
+            }
+            #root {
+                align-content: center;
+                width: 100%;
+                padding: 0;
+            }
+
+            #content--wrapper {
+                margin: auto;
+                width: fit-content
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="root">
+            <div id="content--wrapper">
+                <h1 id="out"></h1>
+            </div>
+        </div>
+
+        <script>
+            let msg = prompt('escreva uma mensagem');
+            let time;
+
+            do{
+                time = parseInt(prompt('defina o tempo em segundos para a mensagem ser exibida'));
+            } while (isNaN(time));
+
+            let out = document.querySelector("#out");
+
+            setTimeout(() => {
+                out.innerText = msg;
+            }, time*1000);
+
+        </script>
+    </body>
+</html>

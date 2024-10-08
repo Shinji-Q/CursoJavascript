@@ -1,0 +1,41 @@
+<html>
+    <head lang="pt-BR">
+        <title>relogio</title>
+        <meta charset="UTF-8">
+        <style>
+            * {
+                font-family: sans-serif;
+            }
+            #root {
+                align-content: center;
+                width: 100%;
+                padding: 0;
+            }
+
+            #content--wrapper {
+                margin: auto;
+                width: fit-content
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="root">
+            <div id="content--wrapper">
+                <h1 id="relogio">00:00:00</h1>
+            </div>
+        </div>
+
+        <script>
+            let data = new Date();
+
+            let relogio = document.querySelector("#relogio");
+
+            relogio.innerHTML = data.toLocaleString('pt-BR');
+
+            setInterval(() => {
+                relogio.innerText = new Date().toLocaleString('pt-BR');
+            }, 1000);
+        </script>
+    </body>
+</html>
