@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Pagamento</title>
+        <meta charset="UTF-8">
+        <style>
+            * {
+                font-family: sans-serif;
+            }
+
+            #root {
+                width: fit-content;
+                margin: 10vh auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root">
+            <h1 id="output">alou</h1>
+
+            <script>
+                const output = document.querySelector('div#root h1');
+
+                function writeToDocument(message){
+                    output.innerText = message;
+                }
+
+                function main() {
+
+                    let valor = parseFloat(prompt('informe o valor do produto'));
+                    let op = parseInt(prompt(
+                        'informe o código de operação:\n' +
+                        '    0 - à vista no dinheiro/pix\n' + 
+                        '    1 - à vista no cartão de crédito\n' +
+                        '    2 - em 2 vezes sem juros\n' +
+                        '    3 - em 3 vezes com juros (10%)\n'));
+
+                    if(isNaN(valor) || isNaN(op)){
+                        writeToDocument('inputs inválidos!');
+                    }
+
+                    switch(op){
+                        case 0:
+                            writeToDocument(`Total com 10% de desconto à vista no dinheiro ou pix: R$ ${(valor * 0.9).toFixed(2)}`);
+                            break;
+                        case 1:
+                            writeToDocument(`Total com 5% de desconto à vista no cartão de crédito: R$ ${(valor * 0.95).toFixed(2)}`);
+                            break;
+                        case 2:
+                            writeToDocument(`Em duas vezes sem juros de: R$ ${(valor/2).toFixed(2)} (Total: R$ ${valor.toFixed(2)})`);
+                            break;
+                        case 3:
+                            writeToDocument(`Em Três vezes com juros(10%) de : ${((valor * 1.1)/3).toFixed(2)} (Total: R$ ${(valor * 1.1).toFixed(2)})`);
+                            break;
+                        default:
+                            writeToDocument('operação inválida.');
+                    }
+                }
+
+                main();
+            </script>
+        </div>
+    </body>
+</html>
+

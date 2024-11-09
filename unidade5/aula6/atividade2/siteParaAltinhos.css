@@ -1,0 +1,98 @@
+* {
+  font-family: sans-serif;
+}
+
+#agreement-block{
+  position: absolute;
+  top:0;
+  left: 0;
+}
+
+#filter {
+
+  position:fixed;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(30px);
+}
+
+#agreement-card {
+  width: 20vw;
+
+  background-color: teal;
+  color: white;
+
+  position: relative;
+  top: 10vh;
+  left: 40vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap:20px;
+
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+
+  padding: 20px;
+  border-radius: 20px;
+
+}
+
+#agreement-card h1, #agreement-card p {
+  margin: 0;
+}
+
+#agreement-card input[type="number"] {
+  height: 30px;
+  font-size: 1.5em;
+  border-radius: 10px;
+  border: 0px;
+  padding: 5px;
+  text-align:right;
+}
+
+#agreement-card input[type="number"]:focus{
+  background: #f0f0f0;
+  border: 0px;
+  outline:none;
+}
+
+#agreement-card .checkbox-wrapper{
+  align-content: center;
+}
+
+#agreement-card .checkbox-wrapper input[type=checkbox] {
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+#agreement-card .checkbox-wrapper label {
+  margin: auto;
+  text-align: center;
+}
+
+#agreement-card button{
+  height: 40px;
+  width: 100%;
+  min-width: 80px;
+  max-width: 160px;
+  margin: 0 auto;
+}
+
+#content {
+  height: 10000px;
+  background: rgb(255,255,255);
+  background: linear-gradient(32deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 23%, rgba(255,255,255,1) 61%, rgba(0,0,0,1) 100%);
+}
+
+#content--wrapper {
+  margin: 40px auto;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 40px;
+}

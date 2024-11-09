@@ -1,0 +1,45 @@
+<html lang="pt-br">
+    <head>
+        <title>Conceito</title>
+        <meta charset="UTF-8">
+        <style>
+            * {
+                font-family: sans-serif;
+            }
+
+            #root {
+                width: fit-content;
+                margin: 10vh auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root">
+            <h1>EITA</h1>
+
+            <script>
+                let nota = parseInt(prompt('informe a nota do aluno'));
+                const output = document.querySelector('div#root h1');
+
+                function writeToDocument(message){
+                    output.innerText = message;
+                }
+
+                if(isNaN(nota)){
+                    writeToDocument("Input inválido");
+                } else if(nota < 0 || 100 < nota) {
+                    writeToDocument("a nota deve estar no intervalo [0, 100]");
+                } else if(nota < 50) {
+                    writeToDocument("Insuficiente");
+                } else if(nota < 70) {
+                    writeToDocument("Regular");
+                } else if(nota < 90) {
+                    writeToDocument("Bom");
+                } else if(nota <= 100) {
+                    writeToDocument("Excelente");
+                }
+
+            </script>
+        </div>
+    </body>
+</html>

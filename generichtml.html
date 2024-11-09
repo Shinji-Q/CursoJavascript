@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>CALCULADORA</title>
+        <meta charset="UTF-8">
+        <style>
+            * {
+                font-family: sans-serif;
+            }
+
+            #root {
+                width: fit-content;
+                margin: 10vh auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root">
+            <h1 id="output">alou</h1>
+
+            <script>
+                const output = document.querySelector('div#root h1');
+
+                function writeToDocument(message){
+                    output.innerText = message;
+                }
+
+            </script>
+        </div>
+    </body>
+</html>
+
