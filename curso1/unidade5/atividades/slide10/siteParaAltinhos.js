@@ -1,4 +1,3 @@
-(function() {
 
     function main() {
         console.log("carregado!");
@@ -12,8 +11,7 @@
         /** @type {HTMLButtonElement} */
         let proceedButton = document.querySelector('button[name="proceed"]');
 
-        console.log(agreeInput);
-        console.log(ageInput);
+        let agreementBlock = document.querySelector('div#agreement-block');
 
         agreeInput.addEventListener('change', ev => {
             /** @type {HTMLInputElement} */
@@ -27,13 +25,20 @@
 
             console.log('click!');
             let age = ageInput.value;
-            console.log(age);
-            console.log(typeof age);
 
         })
 
-        agreementForm.onsubmit = (ev) => {
+        agreementForm.onsubmit = function(ev) {
             ev.preventDefault();
+
+            let age = parseInt(this.age.value);
+
+            if(!isNaN(age) && age >= 18) {
+                agreementBlock.hidden = true;
+            } else {
+                window.location.replace('https://youtu.be/dQw4w9WgXcQ?si=KlKo0POEsnpvvday');
+
+            }
         }
     }
 
@@ -43,4 +48,3 @@
     } else {
         document.addEventListener('DOMContentLoaded', main);
     }
-})();
