@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head lang="pt-br">
+        <title>Somar até não dar</title>
+        <meta charset="UTF-8">
+        <style>
+            * {
+                font-family: sans-serif;
+            }
+
+            div#root {
+                width: 100%;
+                align-content: center;
+            }
+
+            div#content{
+                margin: 10vh auto;
+                width: fit-content;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="root">
+            <div id="content">
+                <h1 id="output">ola</h1>
+            </div>
+        </div>
+
+        <script>
+
+            let n = NaN;
+            let count = -1;
+            let acc = 0;
+
+            do{
+                count++
+                n = parseFloat(prompt('informe um valor (0 ou valor não numérico para finalizar)'));
+
+                if(!isNaN(n)){
+                    acc += n;
+                }
+
+            } while(!isNaN(n) && n !== 0)
+
+            let out = document.querySelector('#output');
+
+            if(acc === 0 && count === 0){
+                out.innerText = 'media não pode ser determinada';
+            } else{
+                out.innerText = acc/count;
+            }
+
+        </script>
+    </body>
+</html>

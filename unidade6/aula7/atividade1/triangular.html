@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head lang="pt-br">
+        <title>Números tri</title>
+        <meta charset="UTF-8">
+        <style>
+            * {
+                font-family: sans-serif;
+            }
+
+            div#root {
+                width: 100%;
+                align-content: center;
+            }
+
+            div#content{
+                margin: 10vh auto;
+                width: fit-content;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="root">
+            <div id="content">
+                <h1 id="output">ola</h1>
+            </div>
+        </div>
+
+        <script>
+            let n = NaN;
+
+            while(isNaN(n) || n < 0){
+                n = parseInt(prompt('inform um numero'));
+            }
+
+            let res = 0;
+            let acc = '';
+
+            while(n > 0) {
+                res +=n;
+
+                if(n === 1) {
+                    acc += n + ' = ' + res;
+                } else {
+                    acc += n + ' + '
+                }
+                n--;
+            }
+
+            let out = document.querySelector('#output');
+            out.innerText = acc;
+
+        </script>
+    </body>
+</html>
