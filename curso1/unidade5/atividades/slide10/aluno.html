@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Aluno Aprovado (?)</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="root">
+            <div id="out"></div>
+            
+            <script>
+                let nota = parseFloat(prompt('digite a nota do aluno'));
+
+                while(isNaN(nota) || nota < 0 || nota > 10) {
+                    nota = parseFloat(prompt('digite uma nota válida!'));
+                }
+
+                let out = document.querySelector("div#out");
+
+                if(nota >= 7){
+                    out.innerHTML = `<h1> Aluno Aprovado! :)</h1>`
+                } else {
+                    out.innerHTML = `<h1> Aluno Reprovado... :(</h1>`
+                }
+
+            </script>
+        </div>
+    </body>
+</html>
+
