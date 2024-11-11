@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>avaliação para desconto</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="root">
+            <div id="out"></div>
+            
+            <script>
+                let val = parseFloat(prompt('digite o valor da compra'));
+
+                while(isNaN(val)) {
+                    val = parseFloat(prompt('digite um numero valido'));
+                }
+
+                let out = document.querySelector("div#out");
+
+                if(val >= 100){
+                    out.innerHTML = `
+                    <h1>
+                        Valor com desconto(10%): 
+                    </h1>
+                    <p>
+                        de R$ ${val.toFixed(2)}
+                    </p>
+                    <p>
+                        por R$ ${(val * 0.9).toFixed(2)}
+                    </p>`
+                } else {
+                    out.innerHTML = `
+                    <h1>
+                        Valor total da compra:
+                    </h1>
+                    <p>R$ ${val.toFixed(2)}</p>
+                    `
+                }
+
+            </script>
+        </div>
+    </body>
+</html>
+
