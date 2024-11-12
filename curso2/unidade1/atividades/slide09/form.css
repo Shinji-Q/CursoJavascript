@@ -1,0 +1,85 @@
+/* css gerado com auxilio de IA */
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Centralizing the card */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5; /* Light background color */
+}
+
+/* Styling the card */
+.card {
+    background-color: #ffffff; /* White background for the card */
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 400px;
+    width: 100%; /* Full width but max 400px */
+    text-align: center;
+}
+
+/* Styling the form elements */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between inputs */
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333; /* Darker color for the title */
+}
+
+/* Input and textarea styling */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+    padding: 10px;
+    border: none;
+    background-color: #f0f0f0; /* Solid background */
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    color: #333;
+}
+
+/* Checkbox group styling (vertical alignment) */
+.checkbox-group {
+    display: flex;
+    flex-direction: column; /* Align checkboxes vertically */
+    align-items: flex-start; /* Align labels and checkboxes to the left */
+    gap: 10px; /* Space between checkboxes */
+}
+
+.checkbox-group div {
+    display: flex;
+    align-items: center; /* Align checkbox and label vertically */
+    gap: 5px; /* Small space between checkbox and label */
+}
+
+/* Button styling */
+button {
+    padding: 10px;
+    background-color: #007BFF; /* Solid blue background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+

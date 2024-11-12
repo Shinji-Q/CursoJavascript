@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="card">
+        <h2>Formulário de Contato</h2>
+        <form id="contactForm">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
+
+            <label for="mensagem">idade:</label>
+            <input type=number id="idade" name="idade" placeholder="idade">
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que o formulário seja enviado e a página seja recarregada
+
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const idade = parseInt(document.getElementById('idade').value);
+
+            let pessoa = {nome, email, idade};
+            console.log(pessoa);
+
+        });
+    </script>
+</body>
+</html>
+
