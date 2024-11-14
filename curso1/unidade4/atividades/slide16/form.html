@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="form.css">
 </head>
 <body>
-    <div class="card">
+    <div id="toSubmmit" class="card">
         <h2>Formulário de Contato</h2>
         <form id="contactForm">
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
 
             <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
 
             <label for="mensagem">Mensagem:</label>
             <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem"></textarea>
@@ -38,31 +38,46 @@
             <button type="submit">Enviar</button>
         </form>
     </div>
+    <div id="submitted" class="card" hidden>
+        <h2>Formulário enviado com sucesso</h2>
+        <button id="retornar">Retornar</button>
+    </div>
 
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita que o formulário seja enviado e a página seja recarregada
+            event.preventDefault();
 
-            // Coletando os valores dos campos do formulário
             const nome = document.getElementById('nome').value;
             const email = document.getElementById('email').value;
             const mensagem = document.getElementById('mensagem').value;
 
-            // Coletando os valores das checkboxes
             const preferencias = [];
             document.querySelectorAll('input[name="preferencia"]:checked').forEach(function(checkbox) {
                 preferencias.push(checkbox.value);
             });
 
-            // Armazenando os valores nas variáveis
-            console.log("Nome:", nome);
-            console.log("E-mail:", email);
-            console.log("Mensagem:", mensagem);
-            console.log("Horários Preferidos:", preferencias);
-
-            // Agora você pode utilizar os valores como preferir
-            // Exemplo: fazer uma requisição, salvar em um banco de dados, etc.
+            const card = document.querySelector('div.card#toSubmmit');
+            const submittedCard = document.querySelector('div.card#submitted');
+            card.hidden = true;
+            submittedCard.hidden = false;
         });
+
+        document.querySelector('#retornar').addEventListener('click', function(event) {
+
+            document.getElementById('nome').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('mensagem').value = '';
+
+            document.querySelectorAll('input[name="preferencia"]:checked').forEach(function(checkbox) {
+                checkbox.checked = false;
+            });
+
+            const card = document.querySelector('div.card#toSubmmit');
+            const submittedCard = document.querySelector('div.card#submitted');
+            card.hidden = false;
+            submittedCard.hidden = true;
+
+        })
     </script>
 </body>
 </html>
